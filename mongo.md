@@ -65,18 +65,18 @@
     ```db.mycol.find({condition1}, $or: [{condition2},{condition3}])  ```
 
 13. Update values in the existing document   
-```db.collection_name.update(SELECTION_CRITERIA, UPDATED_DATA)```
+```db.collection_name.update(SELECTION_CRITERIA, UPDATED_DATA)```   
 Example:   
-    ```db.mycol.update({'key':'old_value'},{$set:{'key':'new_value'}})```
+    ```db.mycol.update({'key':'old_value'},{$set:{'key':'new_value'}})```   
     To update multiple documents - ```{multi:true}```
 
 14. *Replace* existing document with a new document passed in the save() method   
 ```db.collection_name.save(NEW_DATA)```
 
 15. Remove document form collection   
-```db.collection_name.remove(DELETION_CRITERIA[,justOne])```
+```db.collection_name.remove(DELETION_CRITERIA[,justOne])```   
 Example:
-```db.mycol.remove({'kay':'value'})```
+```db.mycol.remove({'kay':'value'})```   
 If justOne is 1, mongo will remove only one document   
 If you dont specify deletion criteria, mongo will delete all docs form the collection   
 
@@ -90,13 +90,13 @@ If you dont specify deletion criteria, mongo will delete all docs form the colle
 ```db.collection_name.find().skip(N)```
 
 19. Sort records   
-```db.collection_name.find().sort({KEY:1})```
+```db.collection_name.find().sort({KEY:1})```   
 1->Ascending, 2->Descending
 
 20. Aggregation   
-```db.collection_name.aggregate(AGGREGATE_OPERATION)```
+```db.collection_name.aggregate(AGGREGATE_OPERATION)```   
 Aggregate Expressions:   
-```$sum, $avg, $min, $max, $push, $addToSet, $first, $last```
+```$sum, $avg, $min, $max, $push, $addToSet, $first, $last```   
 Stages in aggregation framework:   
 ```$project, $match, $group, $sort, $skip, $limit, $unwind```
 
